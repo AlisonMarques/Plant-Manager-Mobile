@@ -1,5 +1,7 @@
-import {useNavigation} from '@react-navigation/core';
 import React, {useState} from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+import {useNavigation} from '@react-navigation/core';
 import {
   SafeAreaView,
   StyleSheet,
@@ -10,6 +12,7 @@ import {
   TouchableWithoutFeedback,
   Platform,
   Keyboard,
+  Alert,
 } from 'react-native';
 
 import {Button} from '../components/Button';
@@ -41,8 +44,25 @@ export function UserIdentification() {
   const navigation = useNavigation();
 
   //função para realizar a navegação
-  function handleSubmit() {
-    navigation.navigate('Confirmation');
+  async function handleSubmit() {
+    // verificando se o usuário passou um nome
+    if (!name) return Alert.alert('Me diz como chamar você. 😅');
+
+    try {
+      //Salvando o nome do usuário no async storage
+      await AsyncStorage.setItem('@plantmanager:user', name);
+
+      navigation.navigate('Confirmation', {
+        title: 'Prontinho',
+        subtitle:
+          'Agora vamos começar a cuidar das suas plantinhas com muito cuidado.',
+        buttonTitle: 'Começar',
+        icon: 'smile',
+        nextScreen: 'PlantSelect',
+      });
+    } catch {
+      Alert.alert('Não foi possível salvar o seu nome. 😅');
+    }
   }
 
   return (
@@ -54,7 +74,7 @@ export function UserIdentification() {
           <View style={styles.content}>
             <View style={styles.form}>
               <View style={styles.header}>
-                <Text style={styles.emoji}>{isFilled ? '😄' : '😃'}</Text>
+                <Text style={styles.emoji}>{isFilled ? '😃' : '😄'}</Text>
 
                 <Text style={styles.title}>
                   Como podemos{'\n'}
