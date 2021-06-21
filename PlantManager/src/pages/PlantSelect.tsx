@@ -49,7 +49,9 @@ export function PlantSelect() {
   function handleEnvironmentSelected(environment: string) {
     setEnvironmentSelected(environment);
 
-    if (environment == 'all') return setFilteredPlants(plants);
+    if (environment === 'all') {
+      return setFilteredPlants(plants);
+    }
 
     const filtered = plants.filter(plant =>
       plant.environments.includes(environment),
@@ -64,7 +66,9 @@ export function PlantSelect() {
     );
 
     // se nao tem nada para carregar, saia do loading
-    if (!data) return setLoading(true);
+    if (!data) {
+      return setLoading(true);
+    }
 
     if (page > 1) {
       setPlants(oldValue => [...oldValue, ...data]);
@@ -81,7 +85,9 @@ export function PlantSelect() {
   }
 
   function handleFetchMore(distance: number) {
-    if (distance < 1) return;
+    if (distance < 1) {
+      return;
+    }
 
     setLoadingMore(true);
     setPage(oldValue => oldValue + 1);
@@ -119,7 +125,9 @@ export function PlantSelect() {
     fetchPlants();
   }, []);
 
-  if (loading) return <Load />;
+  if (loading) {
+    return <Load />;
+  }
 
   return (
     <View style={styles.container}>
