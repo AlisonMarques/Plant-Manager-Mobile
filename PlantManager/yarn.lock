@@ -1303,6 +1303,11 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
   integrity sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
 
+"@types/react-native-push-notification@^7.2.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@types/react-native-push-notification/-/react-native-push-notification-7.2.0.tgz#10ed45e95fa6f27e82099c09ef820def0b4c19fb"
+  integrity sha512-4kErWFa0qit8qzPB6Nbp7kG9NiwDyKu5XxrNlrCIc1zoFxu48ABeofVvNCKv2RtlmFvCftibtykeysRZCeuT8A==
+
 "@types/react-native-vector-icons@^6.4.6":
   version "6.4.6"
   resolved "https://registry.yarnpkg.com/@types/react-native-vector-icons/-/react-native-vector-icons-6.4.6.tgz#848e3b14572def56212cafbf5cb1254b445bfb41"
@@ -3787,6 +3792,11 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
 
+ismounted@^0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/ismounted/-/ismounted-0.1.8.tgz#831c1aae029f4ef64be1ced8247bf65656484463"
+  integrity sha512-Ts0B3pibn1QxcpyHJZKle4NZe3rXEPnEaUK4o2uyzQQ6Sea8lgbbowVU8pZ8C6jrXyBRWW1LU+x9Nr+h5edVWg==
+
 isobject@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-2.1.0.tgz#f065561096a3f1da2ef46272f815c840d87e0c89"
@@ -4218,7 +4228,7 @@ jest@^26.6.3:
     import-local "^3.0.2"
     jest-cli "^26.6.3"
 
-jetifier@^1.6.2:
+jetifier@^1.6.2, jetifier@^1.6.6:
   version "1.6.6"
   resolved "https://registry.yarnpkg.com/jetifier/-/jetifier-1.6.6.tgz#fec8bff76121444c12dc38d2dad6767c421dab68"
   integrity sha512-JNAkmPeB/GS2tCRqUzRPsTOHpGDah7xP18vGJfIjZC+W2sxEHbxgJxetIjIqhjQ3yYbYNEELkM/spKLtwoOSUQ==
@@ -5639,6 +5649,11 @@ react-native-iphone-x-helper@^1.3.0, react-native-iphone-x-helper@^1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.3.1.tgz#20c603e9a0e765fd6f97396638bdeb0e5a60b010"
   integrity sha512-HOf0jzRnq2/aFUcdCJ9w9JGzN3gdEg0zFE4FyYlp4jtidqU03D5X7ZegGKfT1EWteR0gPBGp9ye5T5FvSWi9Yg==
+
+react-native-push-notification@^7.2.3:
+  version "7.2.3"
+  resolved "https://registry.yarnpkg.com/react-native-push-notification/-/react-native-push-notification-7.2.3.tgz#e5efa0d48bfa27ad0cab538ba859b5f2cd21b684"
+  integrity sha512-MWwzGXGD22vQ35roDWBQ4EJl1jS4kuuAAdxqe2C88gULgzT6rQkR9wszl5b5K+hIWqve50qg4zJoSgarr//2KA==
 
 react-native-reanimated@^2.1.0:
   version "2.1.0"
